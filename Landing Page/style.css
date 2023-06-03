@@ -29,8 +29,8 @@ header{
 }
 
 a.logo{
-    height:12px;
-    width:100px;
+    height:24px;
+    width:200px;
     color:inherit;
 }
 
@@ -41,6 +41,8 @@ header a{
 header nav a{
     text-decoration: none;
     padding: 5px 10px;
+    font-size: 14px;
+    font-weight: 500;
 }
 
 header nav.center{
@@ -110,7 +112,8 @@ section .buttons{
 
 aside{
     position:fixed;
-    right:0;
+    transition-property:right .4s ease;
+    right:-320px;
     width:320px;
     background-color: #fff;
     padding:80px 40px;
@@ -118,10 +121,14 @@ aside{
     height:100vh;
 }
 
+aside.active{
+    right:0;
+}
+
 aside a{
     display:block;
     color:inherit;
-    text-decoration: none;
+    text-decoration: none; 
     padding: 12px 0;
     font-size: 20px;
     font-weight: 800;
@@ -137,5 +144,17 @@ aside button.close{
     padding:10px;
     font-family: sans-serif;
     font-weight: 100;
+    cursor:pointer;
+}
 
+.backdrop{
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0,0,0,.35);
+    backdrop-filter: blur(5px);
+}
+
+.backdrop.active{
+    display:block;
 }
