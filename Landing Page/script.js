@@ -4,18 +4,21 @@ const openMenu = () => {
 };
 
 const closeMenu = () => {
-  document.querySelector(".backdrop").className = "backdrop";
-  document.querySelector("aside").className = "";
+  var hamburger = document.getElementById("hamBurger");
+  hamburger.classList.remove("active");
 };
 
-document.getElementById("menubtn").oneclick = (e) => {
-  e.preventDefault();
-};
+// const menu = document.getElementById("menubtn");
 
-document.querySelector("aside buttons.close").onClick = (e) => {
-  closeMenu();
-};
+function menu() {
+  var hamburger = document.getElementById("hamBurger");
+  hamburger.classList.add("active");
+}
 
-document.querySelector(".backdrop").onClick = (e) => {
-  closeMenu();
-};
+// document.querySelector("aside buttons.close").onClick = (e) => {
+//   closeMenu();
+// };
+
+// document.querySelector(".backdrop").onClick = (e) => {
+//   closeMenu();
+// };
