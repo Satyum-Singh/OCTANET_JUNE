@@ -16,16 +16,20 @@ function App() {
   };
 
   return (
-    <div className="main-container">
-      <div className="center-container">
-        <ToDoInput addList={addList} />
-        <h1 className="app-heading">TODO</h1>
-        <hr />
-        {listToDo.map((listitem, i) => {
-          return <ToDoList key={i} item={listitem} delete={deleteList} />;
-        })}
+    <>
+      <div>
+        <div className="main-container">
+          <div className="center-container">
+            <ToDoInput addList={addList} />
+            <h1 className="app-heading">TODO</h1>
+            <hr />
+            {listToDo.map((listitem, i) => {
+              return <ToDoList key={i} item={listitem} delete={deleteList} />;
+            })}
+          </div>
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
